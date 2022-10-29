@@ -146,7 +146,7 @@ export default {
                 if (c.indexOf(name) == 0) {
                     const token = c.substring(name.length, c.length);
                     // nytt AJAX-anrop, med FETCH-data
-                    const resp = await fetch("http://127.0.0.1:8000/api/lager/" + id, {
+                    const resp = await fetch("https://produktlagerapi.herokuapp.com/api/lager/" + id, {
                         method: "DELETE",
                         headers: {
                             "Accept": "application/json",

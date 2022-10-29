@@ -63,14 +63,6 @@ export default {
     },
     // 22-3 skapa funktion för att lagra data - ASYNC/WAIT alltid vid fetch()
     methods: {
-        async addImage() {
-            const resp = await fetch("https://produktlagerapi.herokuapp.com/api/upload-file", {
-                method: "POST",
-                headers: { "Content-type": "application/json" }
-            }
-            )
-            console.log(resp)
-        },
 
         async addProduct(cname) {
             // kontroll att något fylls i

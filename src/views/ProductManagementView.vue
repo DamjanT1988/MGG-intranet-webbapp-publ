@@ -83,7 +83,7 @@ export default {
         if (c.indexOf(name) == 0) {
           const token = c.substring(name.length, c.length);
           // vue-fetch syntax mot API/webbtjänst (await = vänta in ett svar)
-          const resp = await fetch("http://127.0.0.1:8000/api/lager", {
+          const resp = await fetch("https://produktlagerapi.herokuapp.com/api/lager", {
             headers: {
               'Authorization': `Bearer ${token}`
             }
