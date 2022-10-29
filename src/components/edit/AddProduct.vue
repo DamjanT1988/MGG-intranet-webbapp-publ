@@ -35,9 +35,6 @@
         <input v-model="expiration_date" type="text" placeholder="yyyy-mm-dd" class="form-control-lg">
         <br><br>
 
-
-        <input type="file" name="file" class="custom-file-input" @change="onUpload" id="chooseFile">
-
         <label for="addProduct" class="form-control-lg">Image description:</label>
         <br><br>
         <input v-model="image_alt" type="text" placeholder="key words" class="form-control-lg">
