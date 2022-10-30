@@ -1,4 +1,5 @@
 <template>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
     <!--  skapa formulär för inmatning av data-->
     <!--  lägg till händelselyssnare för att fånga submit/data (prevent default = ej laddas om)-->
     <form @submit.prevent="addProduct('UserToken')">
