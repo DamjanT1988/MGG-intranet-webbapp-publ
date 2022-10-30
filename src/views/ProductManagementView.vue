@@ -18,7 +18,7 @@
         <h2>ALL PRODUCTS VIEW</h2>
         <p>
           <strong>Search a product by any key word (like product name or #1 article number) and view the result below; or view the whole list
-            below without search: </strong>
+            below without search; reload to search the whole list again: </strong>
         </p>
         <SearchList />
         <br>
