@@ -30,7 +30,7 @@ export default {
             for (i = 0; i < x.length; i++) {
                 //göm icke-match
                 if (!x[i].innerHTML.toLowerCase().includes(input)) {
-                    x[i].style.display = "none";
+                    x[i].style.display = "hidden";
                 }
                 //visa matchade
                 else {
