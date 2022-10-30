@@ -91,7 +91,7 @@ export default {
                     if (c.indexOf(name) == 0) {
                         const token = c.substring(name.length, c.length);
 
-                        const resp = await fetch("https://produktlagerapi.herokuapp.com/api/lager", {
+                        const resp = await fetch("https://produktlagerapi.herokuapp.com/api/lager/", {
                             method: "POST",
                             headers: {
                                 "Accept": "application/json",
