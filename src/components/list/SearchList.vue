@@ -3,7 +3,7 @@
     <form @submit.prevent="search_product()">
         <input id="searchbar" type="text" name="search" class="form-control-lg" placeholder="key word">
         <br><br>
-        <input type="submit" class="btn btn-dark" value="Search!">
+        <input type="submit" class="btn btn-dark" value="Search in list!">
     </form>
     <br>
     <button class="btn btn-dark" @click="reloadList()">Reload list!</button>
