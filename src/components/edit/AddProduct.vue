@@ -65,7 +65,7 @@ export default {
     // 22-3 skapa funktion för att lagra data - ASYNC/WAIT alltid vid fetch()
     methods: {
 
-        addProduct(cname) {
+        async addProduct(cname) {
             // kontroll att något fylls i
             if (this.product_title.length > 0) {
 
@@ -91,7 +91,7 @@ export default {
                     if (c.indexOf(name) == 0) {
                         const token = c.substring(name.length, c.length);
 
-                        const resp = fetch("https://produktlagerapi.herokuapp.com/api/lager", {
+                        const resp = await fetch("https://produktlagerapi.herokuapp.com/api/lager", {
                             method: "POST",
                             headers: {
                                 "Accept": "application/json",
