@@ -3,7 +3,7 @@
     <form @submit.prevent="search_product()">
         <input id="searchbar" type="text" name="search" class="form-control-lg" placeholder="key word">
         <br><br>
-        <input type="submit"  class="btn btn-dark" value="Search!">
+        <input type="submit" class="btn btn-dark" value="Search!">
     </form>
 
 </template>
@@ -21,6 +21,9 @@ export default {
             let x = document.getElementsByClassName('listobject');
             let i;
 
+            // läs in bibliotek på nytt
+            this.$emit("addedProduct");
+
             //loopa igenom alla HTML-objekt
             for (i = 0; i < x.length; i++) {
                 //göm icke-match
@@ -35,7 +38,10 @@ export default {
         }
 
 
-    }
+    },
+        // deklarera emit före
+        emits: ["addedProduct"]
+
 }
 </script>
 

@@ -20,7 +20,7 @@
           <strong>Search a product by any key word (like product name or #1 article number) and view the result below; or view the whole list
             below without search: </strong>
         </p>
-        <SearchList />
+        <SearchList @addedProduct="getProducts('UserToken')"/>
         <br>
 
         <p>
