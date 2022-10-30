@@ -7,6 +7,7 @@
     </form>
     <br>
     <button class="btn btn-dark" @click="reloadList()">Reload list!</button>
+    <br>
 
 </template>
 
