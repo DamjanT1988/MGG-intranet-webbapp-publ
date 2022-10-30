@@ -5,6 +5,7 @@
         <br><br>
         <input type="submit" class="btn btn-dark" value="Search!">
     </form>
+    <button @click="reloadList()">Reload list!</button>
 
 </template>
 
@@ -21,13 +22,6 @@ export default {
             let x = document.getElementsByClassName('listobject');
             let i;
 
-            for (i = 0; i < x.length; i++) {
-                //återställl
-                if (!x[i].innerHTML.toLowerCase().includes(input)) {
-                    x[i].style.display = "item";
-                }
-            }
-
             //loopa igenom alla HTML-objekt
             for (i = 0; i < x.length; i++) {
                 //göm icke-match
@@ -39,6 +33,10 @@ export default {
                     x[i].style.display = "item";
                 }
             }
+        },
+
+        reloadList() {
+            this.$router.go(0);
         }
 
 
