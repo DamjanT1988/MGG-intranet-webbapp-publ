@@ -23,7 +23,7 @@ export default {
 
             for (i = 0; i < x.length; i++) {
                 //återställl
-                x[i].style.display = "item";
+                x[i].style.display = "none";
             }
 
             //loopa igenom alla HTML-objekt
