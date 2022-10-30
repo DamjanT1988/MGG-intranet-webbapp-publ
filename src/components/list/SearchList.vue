@@ -21,8 +21,7 @@ export default {
             let x = document.getElementsByClassName('listobject');
             let i;
 
-            // läs in bibliotek på nytt
-            this.$emit("addedProduct");
+            x.style.display = "item";
 
             //loopa igenom alla HTML-objekt
             for (i = 0; i < x.length; i++) {
@@ -38,10 +37,7 @@ export default {
         }
 
 
-    },
-        // deklarera emit före
-        emits: ["addedProduct"]
-
+    }
 }
 </script>
 
