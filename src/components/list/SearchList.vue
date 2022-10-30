@@ -21,7 +21,10 @@ export default {
             let x = document.getElementsByClassName('listobject');
             let i;
 
-            x.style.display = "item";
+            for (i = 0; i < x.length; i++) {
+                //återställl
+                x[i].style.display = "item";
+            }
 
             //loopa igenom alla HTML-objekt
             for (i = 0; i < x.length; i++) {
