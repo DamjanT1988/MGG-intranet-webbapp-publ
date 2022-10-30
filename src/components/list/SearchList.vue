@@ -5,7 +5,8 @@
         <br><br>
         <input type="submit" class="btn btn-dark" value="Search!">
     </form>
-    <button @click="reloadList()">Reload list!</button>
+    <br>
+    <button class="btn btn-dark" @click="reloadList()">Reload list!</button>
 
 </template>
 
