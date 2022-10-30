@@ -23,14 +23,16 @@ export default {
 
             for (i = 0; i < x.length; i++) {
                 //återställl
-                x[i].style.display = "item";
+                if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                    x[i].style.display = "item";
+                }
             }
 
             //loopa igenom alla HTML-objekt
             for (i = 0; i < x.length; i++) {
                 //göm icke-match
                 if (!x[i].innerHTML.toLowerCase().includes(input)) {
-                    x[i].style.display = "hidden";
+                    x[i].style.display = "none";
                 }
                 //visa matchade
                 else {
