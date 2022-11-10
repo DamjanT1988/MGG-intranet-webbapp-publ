@@ -68,7 +68,9 @@
 
     <br>
     <button @click="deleteProduct(product.id, 'UserToken')" class="btn btn-red"> Delete article!</button>
-    <br><br><br>
+    <br><br>
+    <p id="messageUpdate"></p>
+    <br>
 
 </template>
     
@@ -234,6 +236,7 @@ export default {
                     this.$emit("addedProduct");
                     this.updateProduct();
 
+                    document.getElementById("messageUpdate").innerHTML = "Product deleted!"
                 };
             }
         }
@@ -268,5 +271,11 @@ label {
     background-color: #A1FB8E;
     font-weight: bold;
     font-size: 1.4em;
+}
+
+#messageUpdate {
+    color: green;
+    font-weight: bolder;
+    font-size: 2em;
 }
 </style>

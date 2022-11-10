@@ -67,7 +67,7 @@ export default {
                 } else {
                     //sätt värde
                     document.cookie = "UserToken=" + data.token;
-                    this.$router.go(0);
+                    //this.$router.go(0);
                 }
 
                 if (msg == "Användare inloggad!") {
@@ -76,6 +76,8 @@ export default {
                 } else {
                     document.getElementById("responseLoginFail").innerHTML = data.message;
                 }
+                //ladda om sidan vänta 2 sekunder
+                setTimeout(() => { this.$router.go(0) }, 2000);
             }
         }
     }

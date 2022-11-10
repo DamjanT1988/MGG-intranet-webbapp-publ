@@ -43,6 +43,9 @@
         <!-- -->
         <input type="submit" value="Add product!" class="btn btn-dark">
     </form>
+    <br>
+    <p id="messageAdd"></p>
+    <p id="messageError"></p>
 
 </template>
 
@@ -114,8 +117,13 @@ export default {
 
                         // ladda om listan vid submit via emit mot förälderkomoponent
                         this.$emit("addedProduct");
+
+                        document.getElementById("messageError").innerHTML = ""
+                        document.getElementById("messageAdd").innerHTML = "Product added!"
                     }
                 }
+            } else {
+                document.getElementById("messageError").innerHTML = "Title/EAN number must be filled"
             }
         }
     },
@@ -129,5 +137,17 @@ export default {
 label {
     font-weight: bold;
     font-size: 1.65em;
+}
+
+#messageAdd {
+    color: green;
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+#messageError {
+    color: red;
+    font-weight: bolder;
+    font-size: 2em;
 }
 </style>

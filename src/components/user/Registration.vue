@@ -43,17 +43,17 @@ export default {
     methods: {
         async registerUser(secKey) {
 
-/*            const resp2 = await fetch("http://127.0.0.1:8000/api/securitykey/1", {
-                method: "GET",
-                headers: {
-                    "Accept": "application/json",
-                    "Content-type": "application/json"
-                }
-            })
-
-            // svar från api, lagra i data
-            const data2 = await resp2.json();
-*/
+            /*            const resp2 = await fetch("http://127.0.0.1:8000/api/securitykey/1", {
+                            method: "GET",
+                            headers: {
+                                "Accept": "application/json",
+                                "Content-type": "application/json"
+                            }
+                        })
+            
+                        // svar från api, lagra i data
+                        const data2 = await resp2.json();
+            */
             // kontroll att något fylls i-- && data2.securitykey == secKey
             if (this.email.length > 0) {
 
@@ -87,11 +87,13 @@ export default {
                     // spara kaka
                     document.cookie = "UserToken=" + data.token;
                     // uppdatera sida
-                    this.$router.go(0);
+                    //this.$router.go(0);
                 } else {
                     document.getElementById("responseReg").innerHTML = data.message;
                     document.cookie = "UserToken=";
                 }
+                //ladda om sidan vänta 3 sekunder
+                setTimeout(() => { this.$router.go(0) }, 3000);
                 //respons vid inget inmatat eller fel nyckel
             } else {
                 document.getElementById("responseReg").innerHTML = "Mata i fält/Fel säkerhetsnyckel";
