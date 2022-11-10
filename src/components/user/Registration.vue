@@ -89,7 +89,7 @@ export default {
                     // uppdatera sida
                     //this.$router.go(0);
                 } else {
-                    document.getElementById("responseReg").innerHTML = data.message;
+                    document.getElementById("responseReg").innerHTML = "Input all field or wrong security key!";
                     document.cookie = "UserToken=";
                 }
                 //ladda om sidan vänta 3 sekunder
